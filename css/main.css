@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Hammersmith+One&family=Philosopher:ital@1&display=swap");
+
 #header {
   width: 100%;
   position: fixed;
@@ -22,4 +24,27 @@
 #homeTitle {
   position: absolute;
   top: 50%;
+}
+
+#homeTitle h1 {
+  font-family: "Hammersmith One", sans-serif;
+  letter-spacing: 0.2em;
+  text-shadow: 0.1rem 0.1rem 0.2rem #333;
+}
+
+#homeTitle h2 {
+  font-family: "Hammersmith One", sans-serif;
+  letter-spacing: 0.15em;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgb(155, 121, 235);
+  margin-bottom: 0.5em;
+}
+
+#homeTitle h3 {
+  font-family: fantasy;
+  font-style: italic;
+}
+
+#homeTitle button {
+  padding: 0.5em 1.5em;
+  margin-top: 2em;
 }
