@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Hammersmith+One&family=Philosopher:ital@1&display=swap");
 
+/*landing-page section*/
 #header {
   width: 100%;
   position: fixed;
@@ -48,3 +49,4 @@
   padding: 0.5em 1.5em;
   margin-top: 2em;
 }
+/*end of landing page section*/
