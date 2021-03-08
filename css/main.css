@@ -1,6 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Hammersmith+One&family=Philosopher:ital@1&display=swap");
 
+.container-fluid {
+  padding: 0;
+}
+
 /*landing-page section*/
+
+#landing-page {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  position: relative;
+  height: 100vh;
+}
+
 #header {
   width: 100%;
   position: fixed;
