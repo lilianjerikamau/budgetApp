@@ -18,3 +18,8 @@
   font-family: "Gill Sans";
   letter-spacing: 0.2em;
 }
+
+#homeTitle {
+  position: absolute;
+  top: 50%;
+}
