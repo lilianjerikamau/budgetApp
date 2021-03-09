@@ -26,13 +26,13 @@
                                 <a class="nav-link active" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
+                                <a class="nav-link" href="#about">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Budget</a>
+                                <a class="nav-link" href="#budget">Budget</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Budget Tips</a>
+                                <a class="nav-link" href="#tips">Budget Tips</a>
                             </li>
                         </ul>
                     </div>
@@ -47,11 +47,88 @@
                 <a href="#budget"><button>Get Started</button></a>
             </div>
         </div>
+        <div id="budget">
+         <div class="row">
+   <div class="col-11 mx-auto pt-3">
+    <!-- title -->
+    <h3 class="text-uppercase mb-4 text-center">budget app</h3>
+    <div class="row">
+     <div class="col-md-5 my-3">
+      <!-- budget feedback -->
+      <div class="budget-feedback alert alert-danger text-capitalize">budget feedback</div>
+      <!-- budget form -->
+      <form id="budget-form" class=" budget-form">
+       <h5 class="text-capitalize">please enter your budget</h5>
+       <div class="form-group">
+        <input type="number" class="form-control budget-input" id="budget-input">
+       </div>
+       <!-- submit button -->
+       <button type="submit" class="btn text-capitalize budget-submit btn-danger" id="budget-submit">calculate</button>
+      </form>
+     </div>
+     <div class="col-md-7">
+      <!-- app info -->
+      <div class="row my-3">
+       <div class="col-4 text-center mb-2">
+        <h6 class="text-uppercase info-title">budget</h6>
+        <span class="budget-icon"><i class="fas fa-money-bill-alt"></i></span>
+        <h4 class="text-uppercase mt-2 budget" id="budget"><span>$ </span><span id="budget-amount">0</span></h4>
+       </div>
+       <div class="col-4 text-center">
+        <h6 class="text-uppercase info-title">expenses</h6>
+        <span class="expense-icon"><i class="far fa-credit-card"></i></span>
+        <h4 class="text-uppercase mt-2 expense" id="expense"><span>$ </span><span id="expense-amount">0</span></h4>
+       </div>
+       <div class="col-4 text-center">
+        <h6 class="text-uppercase info-title">balance</h6>
+        <span class="balance-icon"><i class="fas fa-balance-scale"></i></span>
+        <h4 class="text-uppercase mt-2 balance" id="balance"> <span>$ </span><span id="balance-amount">0</span></h4>
+       </div>
+      </div>
+     </div>
+    </div>
+
+    <div class="row">
+     <div class="col-md-5 my-3">
+      <!-- expense feedback -->
+      <div class="expense-feedback alert alert-danger text-capitalize">expense feedback</div>
+      <!-- expense form -->
+      <form id="expense-form" class=" expense-form">
+       <h5 class="text-capitalize">please enter your expense</h5>
+       <div class="form-group">
+        <input type="text" class="form-control expense-input" id="expense-input">
+       </div>
+       <h5 class="text-capitalize">please enter expense amount</h5>
+       <div class="form-group">
+        <input type="number" class="form-control expense-input" id="amount-input">
+       </div>
+       <!-- submit button -->
+       <button type="submit" class="btn text-capitalize expense-submit btn-danger" id="expense-submit">add expense</button>
+      </form>
+     </div>
+   
+     
+     <div class="col-md-7 my-3">
+      <!-- expense list -->
+      <div class="expense-list" id="expense-list">
+
+       <div class="expense-list__info d-flex justify-content-between text-capitalize">
+        <h5 class="list-item">expense title</h5>
+        <h5 class="list-item">expense value</h5>
+        <h5 class="list-item">Action</h5>
+       </div>
+      </div>
+     </div>
+    </div>
 
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src='./js/main.js'></script>
+
+
+   </div>
+  </div>
+    </div>
+        </div>
+
 </body>
 
 </html>
