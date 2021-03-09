@@ -1,11 +1,3 @@
-//a function that makes the header position sticky
-$(window).on('scroll load', function () {
-    if ($(window).scrollTop() > 10) {
-        $('#header').addClass('header-active');
-    } else {
-        $('#header').removeClass('header-active');
-    }
-});
 class UI {
   constructor() {
     this.budgetFeedback = document.querySelector(".budget-feedback");
@@ -186,3 +178,11 @@ function eventListeners(){
 document.addEventListener('DOMContentLoaded', function(){
   eventListeners();
 })
+//a function that makes the header position sticky
+$(window).on('scroll load', function () {
+    if ($(window).scrollTop() > 10) {
+        $('#header').addClass('header-active');
+    } else {
+        $('#header').removeClass('header-active');
+    }
+});
