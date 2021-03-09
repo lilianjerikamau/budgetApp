@@ -3,11 +3,15 @@
 This is an web application that allows user’s to add a budget amount, list down their expenses from the budget amount, get total balance after making list of expenses, edit an expense, and delete an expense.
 
 ## Author:
-Lilian Kamau
-Emma Joy
-Cate Grace
-Sharon Kemboi
-Hassan Abdi
+Lilian Kamau,
+
+Emma Joy,
+
+Cate Grace,
+
+Sharon Kemboi,
+
+Hassan Abdi.
 
 ## Installation
 
