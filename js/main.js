@@ -1,138 +1,181 @@
-const amountInput = document.getElementById("budget-input");
-const addForm = document.getElementById("budget-form");
-const budgetAmount = document.getElementById("budget-amount");
-const balanceAmount = document.getElementById("balance-amount");
- const editForm = document.getElementById("editForm");
-    const saveEdit = document.getElementById("saveEdit");
-    const editExpValue = document.getElementById("editExpValue");
-    const editExpNumber = document.getElementById("editExpNumber");
-function getBudgetAmount(amount) {
-  if (!amount) {
-    amountInput.style.border = "1px solid #b80c09";
-    amountInput.placeholder = "input can not be empty";
-    amountInput.style.color = "#b80c09";
-    setTimeout(() => {
-      amountInput.style.color = "#495057";
-      amountInput.style.border = "1px solid gray";
-    }, 3000);
-  } else {
-    budgetAmount.innerText = amount;
-    balanceAmount.innerText = amount;
-    expenseForm.style.display = "block";
-    budgetform.style.display = "none";
-    editForm.style.display = "none";
-    amountInput.value = "";
+
+class UI {
+  constructor() {
+    this.budgetFeedback = document.querySelector(".budget-feedback");
+    this.expenseFeedback = document.querySelector(".expense-feedback");
+    this.budgetForm = document.getElementById("budget-form");
+    this.budgetInput = document.getElementById("budget-input");
+    this.budgetAmount = document.getElementById("budget-amount");
+    this.expenseAmount = document.getElementById("expense-amount");
+    this.balance = document.getElementById("balance");
+    this.balanceAmount = document.getElementById("balance-amount");
+    this.expenseForm = document.getElementById("expense-form");
+    this.expenseInput = document.getElementById("expense-input");
+    this.amountInput = document.getElementById("amount-input");
+    this.expenseList = document.getElementById("expense-list");
+    this.itemList = [];
+    this.itemID = 0;
   }
-}
 
-addForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  getBudgetAmount(amountInput.value);
-});
-const expForm = document.getElementById("expense-form");
-let expName = document.getElementById("expense-input");
-let expNumber = document.getElementById("amount-input");
-
-     id = 0;
-let details = [];
-
-function addExpenses(name, number) {
-  if (!name.length || !number.length) {
-    expName.style.border = "1px solid #b80c09";
-    expName.placeholder = "input can not be empty";
-    expName.style.color = "#b80c09";
-
-    expNumber.style.border = "1px solid #b80c09";
-    expNumber.placeholder = "input can not be empty";
-    expNumber.style.color = "#b80c09";
-
-    setTimeout(() => {
-      expName.style.color = "#495057";
-      expName.style.border = "1px solid gray";
-      expName.placeholder = "input can not be empty";
-
-      expNumber.placeholder = "input can not be empty";
-      expNumber.style.border = "1px solid gray";
-      expNumber.style.color = "#495057";
-    }, 3000);
-  } else {
-    const userExp = {
-      id: id,
-      name: name,
-      number: parseInt(number),
-    };
-    details.push(userExp);
-    displayExp(details);
-    id++;
-    expName.value = "";
-    expNumber.value = "";
+  //submit budget method
+  submitBudgetForm(){
+      const value = this.budgetInput.value;
+      if(value === '' || value < 0){
+        this.budgetFeedback.classList.add('showItem');
+        this.budgetFeedback.innerHTML = `<p>value cannot be empty or negative</p>`;
+        const self = this;
+        setTimeout(function(){
+          self.budgetFeedback.classList.remove('showItem');
+        }, 3000);
+      } else {
+        this.budgetAmount.textContent = value;
+        this.budgetInput.value = '';
+        this.showBalance();
+      }
   }
-}
 
-expForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  addExpenses(expName.value, expNumber.value);
-});
-function displayExp(details) {
-    let expValue = 0;
-    expValue.innerHTML = null;
-    for (i = 0; i < details.length; i++) {
-        expValue.innerHTML += `
-    <div class="expValue" id="${details[i].id}">
-      <div id="expTitleName" class="exp"><p>${details[i].name}</p></div>
-      <div id="expValueAmount" class="exp"><p> <span>$ </span> ${details[i].number}</p></div>
-      <div id="edite_delete">
-        <p>
-          <button id="${details[i].id}" onclick="editExpDetails(${details[i].id})"> <img src="image/edit.svg" width="15" alt=""  /></button> 
-          <button id="${details[i].id}" onclick="delExpenseDetails(${details[i].id})"><img src="image/trash.svg" width="15" alt="" /></button>
-        </p>
-      </div>
+  //show balance
+  showBalance(){
+    const expense = this.totalExpense();
+    const total = parseInt(this.budgetAmount.textContent) - expense;
+    this.balanceAmount.textContent = total;
+    if(total < 0){
+      this.balance.classList.remove('showGreen', 'showBlack');
+      this.balance.classList.add('showRed');
+    } else if(total > 0){
+      this.balance.classList.remove('showRed', 'showBlack');
+      this.balance.classList.add('showGreen');
+    } else if(total === 0){
+      this.balance.classList.remove('showRed', 'showGreen');
+      this.balance.classList.add('showBlack');
+    }
+  }
+  //submit expense form
+  submitExpenseForm(){
+    const expenseValue = this.expenseInput.value;
+    const amountValue = this.amountInput.value;
+    if(expenseValue === '' || amountValue === '' || amountValue < 0){
+      this.expenseFeedback.classList.add('showItem');
+      this.expenseFeedback.innerHTML = `<p>values cannot be empty or negative</p>`;
+      const self = this;
+      setTimeout(function(){
+        self.expenseFeedback.classList.remove('showItem');
+      }, 3000)
+    } else {
+      let amount = parseInt(amountValue);
+      this.expenseInput.value = '';
+      this.amountInput.value = '';
+
+      let expense = {
+        id: this.itemID,
+        title: expenseValue,
+        amount: amount
+      }
+      this.itemID++;
+      this.itemList.push(expense);
+      this.addExpense(expense);
+      this.showBalance();
+
+    }
+  }
+
+  //add expense
+  addExpense(expense){
+    const div = document.createElement('div');
+    div.classList.add('expense');
+    div.innerHTML = `<div class="expense-item d-flex justify-content-between align-items-baseline">
+    <h6 class="expense-title mb-0 text-uppercase list-item">- ${expense.title}</h6>
+    <h5 class="expense-amount mb-0 list-item">$${expense.amount}</h5>
+    <div class="expense-icons list-item">
+     <a href="#" class="edit-icon mx-2" data-id="${expense.id}">
+      <i class="fas fa-edit"></i>
+     </a>
+     <a href="#" class="delete-icon" data-id="${expense.id}">
+      <i class="fas fa-trash"></i>
+     </a>
     </div>
-  `;
-    }
-    calcExpenses();
-    displayExpenses.style.display = "block";
-    function calcExpenses() {
-        let totalExp = 0;
-        for (i = 0; i < details.length; i++) {
-            totalExp = details[i].number + totalExp;
-        }
-        expensesAmount.innerText = totalExp;
-        updateBalance();
-    }
-    function updateBalance() {
-        balanceAmount.innerText =
-            parseInt(budgetAmount.innerText) - parseInt(expensesAmount.innerText);
-    }
-    function editExpDetails(id) {
-        expenseForm.style.display = "none";
-        budgetform.style.display = "none";
-        editForm.style.display = "We block";
-        details.findIndex((item) => {
-            if (item.id === id) {
-                editExpName.value = item.name;
-                editExpNumber.value = item.number;
-                saveEdit.children[2].id = item.id;
-                modal.style.display = "block";
-            }
-        });
-    }
-   
+   </div`;
+   this.expenseList.appendChild(div);
+  }
 
-    function getExpValue(editExpName, editExpNumber, id) {
-        edited = details.findIndex((obj) => obj.id == id);
-        details[edited].name = editExpName;
-        details[edited].number = parseInt(editExpNumber);
-        displayExp(details);
-    }
+  //total expense
+  totalExpense(){
+    let total = 0;
+    if(this.itemList.length > 0){
+      total = this.itemList.reduce(function(acc, curr){
+        acc += curr.amount;
+        return acc;
+      }, 0)
+    } 
+    this.expenseAmount.textContent = total;
+    return total;
+  }
 
-    saveEdit.addEventListener("submit", (e) => {
-        e.preventDefault();
-        getExpValue(editExpName.value, editExpNumber.value, saveEdit.children[2].id);
-    });
-    function delExpenseDetails(id) {
-        let index = details.findIndex((item) => item.id === id);
-        details.splice(index, 1);
-        displayExp(details);
-    }
+  //edit expense
+  editExpense(element){
+    let id = parseInt(element.dataset.id);
+    let parent = element.parentElement.parentElement.parentElement;
+    //remove from DOM
+    this.expenseList.removeChild(parent);
+    //remove from the list
+    let expense = this.itemList.filter(function(item){
+      return item.id === id;
+    })
+    //show values
+    this.expenseInput.value = expense[0].title;
+    this.amountInput.value = expense[0].amount;
+    //remove from the list
+    let tempList = this.itemList.filter(function(item){
+      return item.id !== id;
+    })
+    this.itemList = tempList;
+    this.showBalance();
+  }
+
+  //delete expense
+  deleteExpense(element){
+    let id = parseInt(element.dataset.id);
+    let parent = element.parentElement.parentElement.parentElement;
+    //remove from DOM
+    this.expenseList.removeChild(parent);
+    //remove from the list
+    let tempList = this.itemList.filter(function(item){
+      return item.id !== id;
+    })
+    this.itemList = tempList;
+    this.showBalance();
+  }
 }
+
+function eventListeners(){
+  const budgetForm = document.getElementById('budget-form');
+  const expenseForm = document.getElementById('expense-form');
+  const expenseList = document.getElementById('expense-list');
+
+  //new instance of UI Class
+  const ui = new UI();
+  
+  //budget form submit
+  budgetForm.addEventListener('submit', function(event){
+    event.preventDefault();
+    ui.submitBudgetForm();
+  })
+  //expense form submit
+  expenseForm.addEventListener('submit', function(event){
+    event.preventDefault();
+    ui.submitExpenseForm();
+
+  })
+  //expense list submit
+  expenseList.addEventListener('click', function(event){
+    if (event.target.parentElement.classList.contains('edit-icon')){
+      ui.editExpense(event.target.parentElement);
+    }else if (event.target.parentElement.classList.contains('delete-icon')){
+      ui.deleteExpense(event.target.parentElement);
+    }
+  })
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  eventListeners();
+})
