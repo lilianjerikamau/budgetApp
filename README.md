@@ -2,11 +2,20 @@
 
 This is an web application that allows user’s to add a budget amount, list down their expenses from the budget amount, get total balance after making list of expenses, edit an expense, and delete an expense.
 
-## Author
+## Authors:
+Lilian Kamau,
+
+Emma Joy,
+
+Cate Grace,
+
+Sharon Kemboi,
+
+Hassan Abdi.
 
 ## Installation
 
-clone project from: https://github.com/lilianjerikamau/pizzapalace.git
+clone project from: https://github.com/lilianjerikamau/budgetApp.git
 
 ## Setup Instruction
 
@@ -14,14 +23,14 @@ No set up instructions at the moment
 
 ## Technologies used
 
-html5
-css3
-Bootstrap 4
-jQuery
+1.Html5
+2.Css3
+3.Bootstrap 4
+4.Javascript
 
 ## Usage
 
-TODO: Write usage instructions
+Enter your budget amount and expenses and track your expenses.
 
 ## Contributing
 
@@ -31,23 +40,18 @@ TODO: Write usage instructions
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
-## History
 
-TODO: Write history
-
-## Credits
-
-TODO: Write credits
 
 ## Known bugs
 
 No known bugs at the moment
 
-## Demo
-
-Here is a working live demo :
-
 ## Contact
+categrace0@gmail.com
+lilianjerikamau@gmail.com
+emmajoy81@gmail.com
+sharonjep2016@gmail.com
+emperadam@gmail.com
 
 ## License & copyright
 

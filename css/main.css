@@ -1,4 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Hammersmith+One&family=Philosopher:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Hammersmith+One&family=Montserrat:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  /* background-color: rgb(36, 32, 32); */
+  /* color: white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: black;
+  color: white;
+}
 
 .container-fluid {
   padding: 0;
