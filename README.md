@@ -30,7 +30,7 @@ jQuery
 
 ## Usage
 
-TODO: Write usage instructions
+Enter your budget amount and expenses and track your expenses.
 
 ## Contributing
 
