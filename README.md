@@ -23,10 +23,10 @@ No set up instructions at the moment
 
 ## Technologies used
 
-html5
-css3
-Bootstrap 4
-jQuery
+1.Html5
+2.Css3
+3.Bootstrap 4
+4.Jquery
 
 ## Usage
 
