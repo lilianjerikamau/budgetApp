@@ -15,7 +15,7 @@ Hassan Abdi.
 
 ## Installation
 
-clone project from: https://github.com/lilianjerikamau/pizzapalace.git
+clone project from: https://github.com/lilianjerikamau/budgetApp.git
 
 ## Setup Instruction
 
@@ -26,7 +26,7 @@ No set up instructions at the moment
 1.Html5
 2.Css3
 3.Bootstrap 4
-4.Jquery
+4.Javascript
 
 ## Usage
 
