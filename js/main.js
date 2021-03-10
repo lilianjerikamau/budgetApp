@@ -160,6 +160,7 @@ function eventListeners() {
     const expenseForm = document.getElementById('expense-form');
   const expenseList = document.getElementById('expense-list');
 
+
     //new instance of UI Class
     const ui = new UI();
 
@@ -176,12 +177,17 @@ function eventListeners() {
     })
     //expense list submit
     expenseList.addEventListener('click', function (event) {
-        if (event.target.parentElement.classList.contains('edit-icon')) {
-            ui.editExpense(event.target.parentElement);
-        } else if (event.target.parentElement.classList.contains('delete-icon')) {
-            ui.deleteExpense(event.target.parentElement);
+      if (event.target.parentElement.classList.contains('edit-icon')) {
+           event.preventDefault();
+          ui.editExpense(event.target.parentElement);
+          
+      } else if (event.target.parentElement.classList.contains('delete-icon')) {
+          event.preventDefault();
+          ui.deleteExpense(event.target.parentElement);
+         
         }
     })
+  
 }
 
 document.addEventListener('DOMContentLoaded', function () {
