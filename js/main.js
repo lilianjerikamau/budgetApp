@@ -158,7 +158,7 @@ class UI {
 function eventListeners() {
     const budgetForm = document.getElementById('budget-form');
     const expenseForm = document.getElementById('expense-form');
-    const expenseList = document.getElementById('expense-list');
+  const expenseList = document.getElementById('expense-list');
 
     //new instance of UI Class
     const ui = new UI();
