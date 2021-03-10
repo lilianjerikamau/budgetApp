@@ -1,6 +1,9 @@
-
+//Use classes instead of constructor functions
+// class is a keyword wile UI is the name of  the class
 class UI {
+  //constructor method that runs each time we instantiate the class
   constructor() {
+    //this refers to the object then e.g budgetFeedback is the object properties.
     this.budgetFeedback = document.querySelector(".budget-feedback");
     this.expenseFeedback = document.querySelector(".expense-feedback");
     this.budgetForm = document.getElementById("budget-form");
