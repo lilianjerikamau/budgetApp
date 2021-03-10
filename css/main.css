@@ -11,7 +11,6 @@ h2 {
   letter-spacing: 0.15em;
   text-align: center;
   font-size: 2rem;
-  padding-top: 1em;
   color: #00acc1;
 }
 h3 {
@@ -36,7 +35,7 @@ body {
 
 #landing-page {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-  background-image: url(../images/pexels5.jpg);
+  background-image: url(../images/pexels9.jpg);
   background-repeat: repeat;
   background-size: cover;
   position: relative;
@@ -75,13 +74,14 @@ body {
 #homeTitle {
   position: relative;
   margin-bottom: 50px;
-  top: 20%;
+  top: 40%;
 }
 
 #homeTitle h1 {
   font-family: "Hammersmith One", sans-serif;
   letter-spacing: 0.2em;
   text-shadow: 0.1rem 0.1rem 0.2rem #333;
+  color: #00acc1;
 }
 
 #homeTitle h2 {
@@ -100,8 +100,21 @@ body {
 }
 
 #homeTitle button {
-  padding: 0.5em 1.5em;
-  margin-top: 2em;
+  padding: 0.5em 1em;
+  font-weight: bold;
+  outline: none;
+  width: 150px;
+  color: #00acc1;
+  background-color: #fff;
+}
+
+#homeTitle button:hover {
+  transition: 300ms;
+  width: 250px;
+  letter-spacing: 2px;
+  background-color: #00acc1;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 /*end of landing page section*/
@@ -111,7 +124,6 @@ body {
   text-align: center;
   padding: 3em;
 }
-
 /*budget app section*/
 #budgetApp {
   margin-top: 0px;
