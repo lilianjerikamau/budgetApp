@@ -67,8 +67,9 @@ body {
 }
 
 #homeTitle {
-  position: absolute;
-  top: 50%;
+  position: relative;
+  margin-bottom: 50px;
+  top: 20%;
 }
 
 #homeTitle h1 {
