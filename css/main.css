@@ -63,6 +63,7 @@ body {
 #homeTitle {
   position: absolute;
   top: 50%;
+  color: #000;
 }
 
 #homeTitle h1 {
@@ -94,6 +95,7 @@ body {
 #budgetTips {
   text-align: center;
   background: #f7f7f7;
+  margin-bottom: 5em;
 }
 
 #budgetTips h2 {
@@ -163,6 +165,11 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #00acc1;
+}
+/*end of budget tips section*/
+
+#footer {
+  padding-top: 3em;
 }
 
 @media (max-width: 1100px) {
