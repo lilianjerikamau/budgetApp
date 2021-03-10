@@ -89,3 +89,70 @@ body {
 }
 
 /*end of landing page section*/
+
+/*budget tips section*/
+#budgetTips {
+  text-align: center;
+  background: #f7f7f7;
+}
+#budgetTips row {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+#budgetTips a {
+  text-decoration: none;
+  outline: none;
+}
+#budgetTips .card {
+  border-radius: 5px;
+}
+#budgetTips .card .image-box {
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+#budgetTips .card .image-box img {
+  width: 100%;
+  height: 200px;
+  transition: all 0.9s ease;
+}
+#budgetTips .card:hover .image-box img {
+  opacity: 0.7;
+  transform: scale(1.15);
+}
+#budgetTips .card .text-box {
+  text-align: center;
+}
+#budgetTips .card .text-box .text-container {
+  padding: 30px 18px;
+}
+#budgetTips .card {
+  background: #ffffff;
+  margin-top: 50px;
+  transition: all 0.2s ease-in;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4);
+}
+#budgetTips .card:hover {
+  background: #fff;
+  box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in;
+  margin-top: 50px;
+}
+#budgetTips .card .text-box p {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #000000;
+}
+#budgetTips .card .text-box h6 {
+  margin-top: 0px;
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #00acc1;
+}

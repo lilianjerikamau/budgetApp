@@ -26,16 +26,16 @@
                     <div class="collapse navbar-collapse" id="navbarMenu">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Home</a>
+                                <a class="nav-link active" href="#home">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
+                                <a class="nav-link" href="#about">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Budget</a>
+                                <a class="nav-link" href="#budget">Budget</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Budget Tips</a>
+                                <a class="nav-link" href="#budgetTips">Budget Tips</a>
                             </li>
                         </ul>
                     </div>
@@ -51,160 +51,165 @@
             </div>
         </div>
 
-
-        <div class="row">
-            <div class="col-11 mx-auto pt-3">
-                <!-- title -->
-                <h3 class="text-uppercase mb-4">budget app</h3>
-                <div class="row">
-                    <div class="col-md-5 my-3">
-                        <!-- budget feedback -->
-                        <div class="budget-feedback alert alert-danger text-capitalize">budget feedback</div>
-                        <!-- budget form -->
-                        <form id="budget-form" class=" budget-form">
-                            <h5 class="text-capitalize">please enter your budget</h5>
-                            <div class="form-group">
-                                <input type="number" class="form-control budget-input" id="budget-input">
-                            </div>
-                            <!-- submit button -->
-                            <button type="submit" class="btn text-capitalize budget-submit btn-danger"
-                                id="budget-submit">calculate</button>
-                        </form>
-                    </div>
-                    <div class="col-md-7">
-                        <!-- app info -->
-                        <div class="row my-3">
-                            <div class="col-4 text-center mb-2">
-                                <h6 class="text-uppercase info-title">budget</h6>
-                                <span class="budget-icon"><i class="fas fa-money-bill-alt"></i></span>
-                                <h4 class="text-uppercase mt-2 budget" id="budget"><span>$ </span><span
-                                        id="budget-amount">0</span></h4>
-                            </div>
-                            <div class="col-4 text-center">
-                                <h6 class="text-uppercase info-title">expenses</h6>
-                                <span class="expense-icon"><i class="far fa-credit-card"></i></span>
-                                <h4 class="text-uppercase mt-2 expense" id="expense"><span>$ </span><span
-                                        id="expense-amount">0</span></h4>
-                            </div>
-                            <div class="col-4 text-center">
-                                <h6 class="text-uppercase info-title">balance</h6>
-                                <span class="balance-icon"><i class="fas fa-balance-scale"></i></span>
-                                <h4 class="text-uppercase mt-2 balance" id="balance"> <span>$ </span><span
-                                        id="balance-amount">0</span></h4>
+        <div id="budget">
+            <div class="row">
+                <div class="col-11 mx-auto pt-3">
+                    <!-- title -->
+                    <h3 class="text-uppercase mb-4">budget app</h3>
+                    <div class="row">
+                        <div class="col-md-5 my-3">
+                            <!-- budget feedback -->
+                            <div class="budget-feedback alert alert-danger text-capitalize">budget feedback</div>
+                            <!-- budget form -->
+                            <form id="budget-form" class=" budget-form">
+                                <h5 class="text-capitalize">please enter your budget</h5>
+                                <div class="form-group">
+                                    <input type="number" class="form-control budget-input" id="budget-input">
+                                </div>
+                                <!-- submit button -->
+                                <button type="submit" class="btn text-capitalize budget-submit btn-danger"
+                                    id="budget-submit">calculate</button>
+                            </form>
+                        </div>
+                        <div class="col-md-7">
+                            <!-- app info -->
+                            <div class="row my-3">
+                                <div class="col-4 text-center mb-2">
+                                    <h6 class="text-uppercase info-title">budget</h6>
+                                    <span class="budget-icon"><i class="fas fa-money-bill-alt"></i></span>
+                                    <h4 class="text-uppercase mt-2 budget" id="budget"><span>$ </span><span
+                                            id="budget-amount">0</span></h4>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <h6 class="text-uppercase info-title">expenses</h6>
+                                    <span class="expense-icon"><i class="far fa-credit-card"></i></span>
+                                    <h4 class="text-uppercase mt-2 expense" id="expense"><span>$ </span><span
+                                            id="expense-amount">0</span></h4>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <h6 class="text-uppercase info-title">balance</h6>
+                                    <span class="balance-icon"><i class="fas fa-balance-scale"></i></span>
+                                    <h4 class="text-uppercase mt-2 balance" id="balance"> <span>$ </span><span
+                                            id="balance-amount">0</span></h4>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-md-5 my-3">
-                        <!-- expense feedback -->
-                        <div class="expense-feedback alert alert-danger text-capitalize">expense feedback</div>
-                        <!-- expense form -->
-                        <form id="expense-form" class=" expense-form">
-                            <h5 class="text-capitalize">please enter your expense</h5>
-                            <div class="form-group">
-                                <input type="text" class="form-control expense-input" id="expense-input">
-                            </div>
-                            <h5 class="text-capitalize">please enter expense amount</h5>
-                            <div class="form-group">
-                                <input type="number" class="form-control expense-input" id="amount-input">
-                            </div>
-                            <!-- submit button -->
-                            <button type="submit" class="btn text-capitalize expense-submit btn-danger"
-                                id="expense-submit">add expense</button>
-                        </form>
-                    </div>
+                    <div class="row">
+                        <div class="col-md-5 my-3">
+                            <!-- expense feedback -->
+                            <div class="expense-feedback alert alert-danger text-capitalize">expense feedback</div>
+                            <!-- expense form -->
+                            <form id="expense-form" class=" expense-form">
+                                <h5 class="text-capitalize">please enter your expense</h5>
+                                <div class="form-group">
+                                    <input type="text" class="form-control expense-input" id="expense-input">
+                                </div>
+                                <h5 class="text-capitalize">please enter expense amount</h5>
+                                <div class="form-group">
+                                    <input type="number" class="form-control expense-input" id="amount-input">
+                                </div>
+                                <!-- submit button -->
+                                <button type="submit" class="btn text-capitalize expense-submit btn-danger"
+                                    id="expense-submit">add expense</button>
+                            </form>
+                        </div>
 
 
-                    <div class="col-md-7 my-3">
-                        <!-- expense list -->
-                        <div class="expense-list" id="expense-list">
+                        <div class="col-md-7 my-3">
+                            <!-- expense list -->
+                            <div class="expense-list" id="expense-list">
 
-                            <div class="expense-list__info d-flex justify-content-between text-capitalize">
-                                <h5 class="list-item">expense title</h5>
-                                <h5 class="list-item">expense value</h5>
-                                <h5 class="list-item">Action</h5>
+                                <div class="expense-list__info d-flex justify-content-between text-capitalize">
+                                    <h5 class="list-item">expense title</h5>
+                                    <h5 class="list-item">expense value</h5>
+                                    <h5 class="list-item">Action</h5>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
         <div id="budgetTips">
             <div class="row">
                 <div class="col-md-3">
-                    <a href="">
+                    <a href="https://www.moneyunder30.com/how-to-invest" target=" ">
                         <div class="card">
                             <div class="text-box">
                                 <div class="image-box">
                                     <img src="./images/coin-wooden-table1.jpg" alt="" />
                                 </div>
                                 <div class="text-container">
-                                    <h6>Title 01</h6>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                        industry. Lorem Ipsum has been the industry's standard dummy text ever
-                                        since the 1500s.</p>
+                                    <h6>Make Your Money Grow</h6>
+                                    <p>If you want a shot at becoming wealthy, you need to do more than simply earn
+                                        money.You may be thinking to yourself this is not the time to talk about
+                                        investing.But really, there’s no good time to talk about investing.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-            </div>
 
-            <div class="col-md-3">
-                <a href="">
-                    <div class="card">
-                        <div class="text-box">
-                            <div class="image-box">
-                                <img src="./images/pexels6.jpg" alt="" />
-                            </div>
-                            <div class="text-container">
-                                <h6>Title 02</h6>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                    industry. Lorem Ipsum has been the industry's standard dummy text ever
-                                    since the 1500s.</p>
+
+                <div class="col-md-3">
+                    <a href="https://www.debt.org/students/college-budgeting-101/" target=" ">
+                        <div class="card">
+                            <div class="text-box">
+                                <div class="image-box">
+                                    <img src="./images/pexels6.jpg" alt="" />
+                                </div>
+                                <div class="text-container">
+                                    <h6>College Budgeting</h6>
+                                    <p>The college years typically are a student’s first steps into adulthood and if you
+                                        don’t want to stumble directly into debt as you work toward your diploma, learn
+                                        how to create a budget. More importantly, stick to it!</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="">
-                    <div class="card">
-                        <div class="text-box">
-                            <div class="image-box">
-                                <img src="./images/pexels4.jpg" alt="" />
-                            </div>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="http://www.dustinwheelercpa.com/2010/06/29/the-importance-of-accountability-in-a-personal-budget/"
+                        target=" ">
+                        <div class="card">
+                            <div class="text-box">
+                                <div class="image-box">
+                                    <img src="./images/pexels4.jpg" alt="" />
+                                </div>
 
-                            <div class="text-container">
-                                <h6>Title 03</h6>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                    industry. Lorem Ipsum has been the industry's standard dummy text ever
-                                    since the 1500s.</p>
+                                <div class="text-container">
+                                    <h6>FINANCIAL ACCOUNTABILITY</h6>
+                                    <p>The best way to organize personal finances is to use a good computer program that
+                                        puts together all of a person’s financial information, including bank,
+                                        investment, loan, and credit card accounts. I began doing this a few years ago,
+                                        and since then..</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="">
-                    <div class="card">
-                        <div class="text-box">
-                            <div class="image-box">
-                                <img src="./images/pexels1.jpg" alt="" />
-                            </div>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://financialflamingo.com/how-budgeting-changed-my-life/" target=" ">
+                        <div class="card">
+                            <div class="text-box">
+                                <div class="image-box">
+                                    <img src="./images/pexels1.jpg" alt="" />
+                                </div>
 
-                            <div class="text-container">
-                                <h6>Title 04</h6>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                    industry. Lorem Ipsum has been the industry's standard dummy text ever
-                                    since the 1500s.</p>
+                                <div class="text-container">
+                                    <h6>BUDGETING CHANGED MY LIFE</h6>
+                                    <p>Are you constantly afraid to check your bank account? Do you stress out about
+                                        your spending but can’t seem to stop the impulse shopping? You need to get on a
+                                        budget!We’re going to talk about how my budgeting has changed my life.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -218,7 +223,5 @@
     <script src="./js/main.js"></script>
 
 </body>
-
-</html>
 
 </html>
