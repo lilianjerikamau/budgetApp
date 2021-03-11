@@ -158,7 +158,7 @@ class UI {
 function eventListeners() {
     const budgetForm = document.getElementById('budget-form');
     const expenseForm = document.getElementById('expense-form');
-  const expenseList = document.getElementById('expense-list');
+    const expenseList = document.getElementById('expense-list');
 
 
     //new instance of UI Class
@@ -177,19 +177,24 @@ function eventListeners() {
     })
     //expense list submit
     expenseList.addEventListener('click', function (event) {
-      if (event.target.parentElement.classList.contains('edit-icon')) {
-           event.preventDefault();
-          ui.editExpense(event.target.parentElement);
-          
-      } else if (event.target.parentElement.classList.contains('delete-icon')) {
-          event.preventDefault();
-          ui.deleteExpense(event.target.parentElement);
-         
+        if (event.target.parentElement.classList.contains('edit-icon')) {
+            event.preventDefault();
+            ui.editExpense(event.target.parentElement);
+
+        } else if (event.target.parentElement.classList.contains('delete-icon')) {
+            event.preventDefault();
+            ui.deleteExpense(event.target.parentElement);
+
         }
     })
-  
+
 }
 
 document.addEventListener('DOMContentLoaded', function () {
     eventListeners();
 })
+
+$("button#newsLetter").click(function (event) {
+    event.preventDefault();
+    alert("Thank you for subscribing! We will get in touch with you as soon as possible.")
+});

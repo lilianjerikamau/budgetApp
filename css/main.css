@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Hammersmith+One&family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Hind+Siliguri:wght@300&family=Montserrat&display=swap");
 
 * {
   margin: 0;
@@ -20,6 +20,7 @@ h3 {
 
 body {
   font-family: "Montserrat", sans-serif;
+  font-size: 22px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,6 +58,10 @@ body {
   box-shadow: 0.2rem 0 0.5rem #000;
 }
 
+.header-active #websiteName {
+  color: #00acc1;
+}
+
 .nav-item {
   margin-right: 2rem;
 }
@@ -69,48 +74,51 @@ body {
   font-size: 26px;
   font-family: "Gill Sans";
   letter-spacing: 0.2em;
+  font-weight: bold;
 }
 
 #homeTitle {
   position: relative;
   margin-bottom: 50px;
+  margin-left: 1em;
   top: 40%;
 }
 
 #homeTitle h1 {
   font-family: "Hammersmith One", sans-serif;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   text-shadow: 0.1rem 0.1rem 0.2rem #333;
   color: #00acc1;
 }
 
 #homeTitle h2 {
   font-family: "Hammersmith One", sans-serif;
-  letter-spacing: 0.15em;
-  text-shadow: 0.1rem 0rem 0.1rem #333;
+  text-shadow: 0.1rem 0rem 0.2rem #333;
   margin-bottom: 0.5em;
   padding-top: 0;
   text-align: initial;
-  color: #333;
+  color: #fff;
 }
 
 #homeTitle h3 {
-  font-family: fantasy;
+  font-family: "Times New Roman", serif;
   font-style: italic;
+  color: #333;
 }
 
 #homeTitle button {
-  padding: 0.5em 1em;
-  font-weight: bold;
+  padding: 0.5em 0.5em;
+  font-weight: bolder;
+  font-size: 16px;
   outline: none;
-  width: 150px;
+  width: 140px;
   color: #00acc1;
   background-color: #fff;
 }
 
 #homeTitle button:hover {
-  transition: 300ms;
-  width: 250px;
+  transition: 1500ms;
+  width: 170px;
   letter-spacing: 2px;
   background-color: #00acc1;
   color: #fff;
@@ -122,8 +130,18 @@ body {
 /*about section*/
 #about {
   text-align: center;
+  line-height: 2;
   padding: 3em;
 }
+
+#icons .fas {
+  font-size: 3rem;
+}
+
+.services {
+  padding: 2em;
+}
+
 /*budget app section*/
 #budgetApp {
   margin-top: 0px;
@@ -203,13 +221,68 @@ body {
 /*end of budget tips section*/
 
 #footer {
-  padding: 3em;
   background-color: #000;
   color: #fff;
+  display: relative;
+  font-size: 1rem;
+  padding-inline: 3em;
+  justify-content: space-evenly;
+  height: fit-content;
 }
 
-@media (max-width: 1100px) {
+#footer h5 {
+  margin-top: 1em;
+}
+
+#footer ul a {
+  color: #fff;
+}
+#share ul {
+  list-style: none;
+}
+
+#footer a i {
+  color: #00acc1;
+  margin-right: 0.5em;
+}
+
+#footer form input[type="email"] {
+  padding: 0 1rem;
+  outline: none;
+  border: 0.2rem solid #00acc1;
+  background: none;
+  font-size: 1rem;
+  color: #fff;
+  height: 3rem;
+  width: 70%;
+  margin-top: 0.5em;
+}
+
+#footer form button {
+  outline: none;
+  border: none;
+  background-color: #00acc1;
+  font-size: 1rem;
+  color: #fff;
+  height: 3rem;
+  width: 20%;
+  cursor: pointer;
+}
+
+#footer form button:hover {
+  color: #00acc1;
+  background: none;
+  border: 0.1rem solid #00acc1;
+}
+
+@media (max-width: 3100px) {
   #budget {
     width: fit-content;
+  }
+}
+
+@media (max-width: 600px) {
+  #homeTitle {
+    top: 25%;
   }
 }
