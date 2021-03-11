@@ -13,6 +13,11 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" />
     <!-- custom css file link  -->
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <style type="text/css">
+   .text{
+     font-weight: bold;
+   }
+ </style>
 </head>
 
 <body>
@@ -99,13 +104,13 @@
                     <div class="row">
                         <div class="col-md-5 my-3">
                             <!-- budget feedback -->
-                            <div class="budget-feedback alert alert-danger text-capitalize">budget feedback
+                            <div class="budget-feedback alert alert-danger text-capitalize"><b>Budget</b> 
                             </div>
                             <!-- budget form -->
                             <form id="budget-form" class=" budget-form">
                                 <h5 class="text-capitalize">please enter your budget</h5>
                                 <div class="form-group">
-                                    <input type="number" class="form-control budget-input" id="budget-input">
+                                    <input type="number" class="form-control budget-input text" id="budget-input">
                                 </div>
                                 <!-- submit button -->
                                 <button type="submit" class="btn text-capitalize budget-submit btn-danger"
@@ -140,17 +145,17 @@
                     <div class="row">
                         <div class="col-md-5 my-3">
                             <!-- expense feedback -->
-                            <div class="expense-feedback alert alert-danger text-capitalize">expense
-                                feedback</div>
+                            <div class="expense-feedback alert alert-danger text-capitalize"> <b> Expenses</b>
+                                </div>
                             <!-- expense form -->
                             <form id="expense-form" class=" expense-form">
                                 <h5 class="text-capitalize">please enter your expense title</h5>
                                 <div class="form-group">
-                                    <input type="text" class="form-control expense-input" id="expense-input">
+                                    <input type="text" class="form-control expense-input text" id="expense-input">
                                 </div>
                                 <h5 class="text-capitalize">please enter expense amount</h5>
                                 <div class="form-group">
-                                    <input type="number" class="form-control expense-input" id="amount-input">
+                                    <input type="number" class="form-control expense-input text" id="amount-input">
                                 </div>
                                 <!-- submit button -->
                                 <button type="submit" class="btn text-capitalize expense-submit btn-danger"
