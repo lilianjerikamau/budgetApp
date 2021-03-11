@@ -63,10 +63,10 @@ class UI {
     }
     //submit expense form
   submitExpenseForm() {
-       const value = this.budgetInput.value;
+       
         const expenseValue = this.expenseInput.value;
         const amountValue = this.amountInput.value;
-        if (expenseValue === '' || amountValue === '' || amountValue < 0 || amountValue > value ) {
+        if (expenseValue === '' || amountValue === '' || amountValue < 0 ) {
           this.expenseFeedback.classList.add('showItem');
             this.expenseFeedback.innerHTML = `<b><p>values cannot be empty or negative</p></b>`;
             const self = this;
