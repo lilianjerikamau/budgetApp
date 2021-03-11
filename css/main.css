@@ -31,9 +31,13 @@ body {
 .container-fluid {
   padding: 0;
 }
-
+.expense-feedback {
+  visibility: visible;
+}
 /*landing-page section*/
-
+input {
+  text-decoration: solid;
+}
 #landing-page {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   background-image: url(../images/pexels9.jpg);
