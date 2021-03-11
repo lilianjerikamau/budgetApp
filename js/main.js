@@ -37,7 +37,7 @@ class UI {
             setTimeout(function () {
               self.budgetFeedback.classList.remove('showItem');
               self.budgetFeedback.innerHTML = `<b><p>Budget</p></b>`;
-            }, 5000);
+            }, 4000);
         } else {
             this.budgetAmount.textContent = value;
             this.budgetInput.value = '';
@@ -73,7 +73,7 @@ class UI {
             setTimeout(function () {
               self.expenseFeedback.classList.remove('showItem');
                self.expenseFeedback.innerHTML =`<b><p>Expenses</p></b>`;
-            }, 5000)
+            }, 4000)
         } else {
             let amount = parseInt(amountValue);
             this.expenseInput.value = '';
