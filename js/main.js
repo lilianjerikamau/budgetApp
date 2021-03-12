@@ -6,19 +6,20 @@ $(window).on('scroll load', function () {
         $('#header').removeClass('header-active');
     }
 });
-
 $('button#newsLetter').click(function (e) {
     if ($('#email').val()  == '')
     {
         e.preventDefault();
          e.stopImmediatePropagation();
         alert('Please enter your email first');
+         $("#newsletter").trigger("reset");
         
     } else {
          e.preventDefault();
          e.stopImmediatePropagation();
 
         alert("Thank you for subscribing! We will get in touch with you as soon as possible.")
+         $("#newsletter").trigger("reset");
     }
 });
 
