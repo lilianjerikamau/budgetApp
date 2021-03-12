@@ -55,6 +55,15 @@ input {
   left: 0;
   z-index: 1;
 }
+.showGreen {
+  color: green;
+}
+.showRed {
+  color: red;
+}
+.showBlack {
+  color: black;
+}
 
 .header-active {
   background: #fff;
